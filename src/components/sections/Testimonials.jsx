@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Container from '../common/Container.jsx'
 import Section from '../common/Section.jsx'
+import FadeIn from '../common/FadeIn.jsx'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
 const testimonials = [
@@ -55,17 +56,20 @@ const Testimonials = () => {
     <Section>
       <Container>
         {/* Заголовок */}
-        <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-accent uppercase tracking-wider">
-            Отзывы
-          </span>
-          <h2 className="mt-3 text-3xl md:text-4xl lg:text-[48px] font-semibold text-text leading-tight">
-            Что говорят клиенты
-          </h2>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-16">
+            <span className="text-sm font-semibold text-accent uppercase tracking-wider">
+              Отзывы
+            </span>
+            <h2 className="mt-3 text-3xl md:text-4xl lg:text-[48px] font-semibold text-text leading-tight">
+              Что говорят клиенты
+            </h2>
+          </div>
+        </FadeIn>
 
         {/* Слайдер */}
-        <div className="relative max-w-3xl mx-auto">
+        <FadeIn delay={200}>
+          <div className="relative max-w-3xl mx-auto">
           <div className="overflow-hidden">
             <div
               className="transition-transform duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
@@ -125,7 +129,7 @@ const Testimonials = () => {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={prev}
-              className="p-2 rounded-full border border-border-light text-text-secondary hover:text-accent hover:border-accent/30 transition-all duration-200"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 rounded-full border border-border-light text-text-secondary hover:text-accent hover:border-accent/30 transition-all duration-200"
               aria-label="Предыдущий отзыв"
             >
               <ChevronLeft size={20} />
@@ -151,13 +155,14 @@ const Testimonials = () => {
 
             <button
               onClick={next}
-              className="p-2 rounded-full border border-border-light text-text-secondary hover:text-accent hover:border-accent/30 transition-all duration-200"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 rounded-full border border-border-light text-text-secondary hover:text-accent hover:border-accent/30 transition-all duration-200"
               aria-label="Следующий отзыв"
             >
               <ChevronRight size={20} />
             </button>
           </div>
-        </div>
+          </div>
+        </FadeIn>
       </Container>
     </Section>
   )

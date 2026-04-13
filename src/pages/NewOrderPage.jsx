@@ -130,7 +130,7 @@ const NewOrderPage = () => {
           {/* Навигация */}
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors mb-8"
+            className="min-h-[44px] min-w-[44px] inline-flex items-center gap-2 px-3 py-2 text-text-secondary hover:text-accent transition-colors mb-8 rounded-lg"
           >
             <ArrowLeft size={18} />
             Назад
@@ -140,12 +140,12 @@ const NewOrderPage = () => {
 
           {/* Шаги */}
           <div className="mb-10">
-            <div className="flex items-center justify-between max-w-2xl mx-auto">
+            <div className="flex items-center justify-between max-w-2xl mx-auto px-2">
               {steps.map((step, index) => (
                 <div key={step.number} className="flex items-center">
                   {/* Кружок шага */}
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
                       currentStep > step.number
                         ? 'bg-emerald-500 border-emerald-500'
                         : currentStep === step.number
@@ -154,10 +154,10 @@ const NewOrderPage = () => {
                     }`}
                   >
                     {currentStep > step.number ? (
-                      <Check size={20} className="text-white" />
+                      <Check size={18} className="text-white" />
                     ) : (
                       <step.icon
-                        size={20}
+                        size={18}
                         className={currentStep === step.number ? 'text-white' : 'text-text-muted'}
                       />
                     )}
@@ -166,7 +166,7 @@ const NewOrderPage = () => {
                   {/* Линия между шагами */}
                   {index < steps.length - 1 && (
                     <div
-                      className={`w-24 sm:w-32 h-0.5 mx-2 sm:mx-4 transition-all duration-300 ${
+                      className={`w-12 sm:w-24 h-0.5 mx-1 sm:mx-2 transition-all duration-300 ${
                         currentStep > step.number ? 'bg-emerald-500' : 'bg-border-light'
                       }`}
                     />

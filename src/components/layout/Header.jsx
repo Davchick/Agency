@@ -214,7 +214,10 @@ const Header = () => {
                 <Link to="/dashboard" onClick={() => setMobileOpen(false)}>
                   <Button variant="secondary">Мой кабинет</Button>
                 </Link>
-                <button onClick={handleLogout} className="text-sm text-error hover:underline">
+                <button
+                  onClick={handleLogout}
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-medium text-error hover:bg-error/5 transition-colors"
+                >
                   Выйти
                 </button>
               </>

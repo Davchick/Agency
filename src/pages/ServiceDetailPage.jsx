@@ -55,7 +55,7 @@ const ServiceDetailPage = () => {
         <Container>
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-accent transition-colors mb-8"
+            className="min-h-[44px] min-w-[44px] inline-flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-accent transition-colors mb-8 rounded-lg"
           >
             <ArrowLeft size={16} />
             Назад к услугам

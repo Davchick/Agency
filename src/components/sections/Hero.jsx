@@ -54,7 +54,7 @@ const Hero = () => {
 
           {/* Заголовок */}
           <h1
-            className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-text mb-6 animate-fade-in-up stagger-1"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-text mb-6 animate-fade-in-up stagger-1"
           >
             Реклама, которая{' '}
             <span
@@ -94,7 +94,7 @@ const Hero = () => {
 
           {/* Статистика под CTA */}
           <div
-            className="mt-16 grid grid-cols-3 gap-8 animate-fade-in-up stagger-4"
+            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 animate-fade-in-up stagger-4"
           >
             {[
               { value: '150+', label: 'Проектов' },

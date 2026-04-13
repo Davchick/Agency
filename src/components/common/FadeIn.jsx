@@ -1,4 +1,4 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation.js'
+import { useScrollAnimationOnce } from '../../hooks/useScrollAnimation.js'
 
 /**
  * Wrapper component that applies fade-in animation on scroll

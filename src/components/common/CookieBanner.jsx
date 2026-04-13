@@ -49,7 +49,7 @@ const CookieBanner = () => {
               </button>
               <Link
                 to="/privacy"
-                className="p-2.5 rounded-full text-text-secondary hover:text-text hover:bg-background-alt transition-colors"
+                className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2.5 rounded-full text-text-secondary hover:text-text hover:bg-background-alt transition-colors"
                 aria-label="Подробнее"
               >
                 <Settings size={18} />

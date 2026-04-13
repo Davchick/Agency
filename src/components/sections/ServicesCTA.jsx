@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Container from '../common/Container.jsx'
 import Section from '../common/Section.jsx'
 import Button from '../common/Button.jsx'
+import FadeIn from '../common/FadeIn.jsx'
 import { services } from '../../data/services.js'
 import { Send, Check } from 'lucide-react'
 
@@ -28,23 +29,25 @@ const ServicesCTA = () => {
           <div className="absolute top-[-50%] right-[-20%] w-[600px] h-[600px] rounded-full opacity-20 blur-[100px]" style={{ background: 'white' }} />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-xl mx-auto text-center">
-            <div className="w-16 h-16 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-6">
-              <Check size={32} className="text-white" />
+          <FadeIn>
+            <div className="max-w-xl mx-auto text-center">
+              <div className="w-16 h-16 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-6">
+                <Check size={32} className="text-white" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                Заявка отправлена!
+              </h2>
+              <p className="text-white/80 mb-8">
+                Мы свяжемся с вами в ближайшее время для обсуждения деталей.
+              </p>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="text-white underline hover:no-underline"
+              >
+                Отправить ещё одну заявку
+              </button>
             </div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              Заявка отправлена!
-            </h2>
-            <p className="text-white/80 mb-8">
-              Мы свяжемся с вами в ближайшее время для обсуждения деталей.
-            </p>
-            <button
-              onClick={() => setSubmitted(false)}
-              className="text-white underline hover:no-underline"
-            >
-              Отправить ещё одну заявку
-            </button>
-          </div>
+          </FadeIn>
         </Container>
       </Section>
     )
@@ -57,17 +60,18 @@ const ServicesCTA = () => {
       </div>
 
       <Container className="relative z-10">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-              Быстрая заявка
-            </h2>
-            <p className="text-white/80 text-lg">
-              Оставьте контакты — мы перезвоним и подберём услугу
-            </p>
-          </div>
+        <FadeIn>
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+                Быстрая заявка
+              </h2>
+              <p className="text-white/80 text-lg">
+                Оставьте контакты — мы перезвоним и подберём услугу
+              </p>
+            </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label htmlFor="cta-name" className="block text-sm font-medium text-white/70 mb-2">
                 Ваше имя
@@ -133,7 +137,8 @@ const ServicesCTA = () => {
               </a>
             </p>
           </form>
-        </div>
+          </div>
+        </FadeIn>
       </Container>
     </Section>
   )

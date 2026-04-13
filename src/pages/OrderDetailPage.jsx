@@ -93,7 +93,7 @@ const OrderDetailPage = () => {
           {/* Навигация */}
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors mb-6"
+            className="min-h-[44px] min-w-[44px] inline-flex items-center gap-2 px-3 py-2 text-text-secondary hover:text-accent transition-colors mb-6 rounded-lg"
           >
             <ArrowLeft size={18} />
             Назад

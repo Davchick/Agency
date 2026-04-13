@@ -169,7 +169,7 @@ const RegisterPage = () => {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-secondary transition-colors"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 min-w-[44px] min-h-[44px] flex items-center justify-center text-text-muted hover:text-text-secondary transition-colors"
                     aria-label={showPassword ? 'Скрыть пароль' : 'Показать пароль'}
                   >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -194,7 +194,7 @@ const RegisterPage = () => {
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-secondary transition-colors"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 min-w-[44px] min-h-[44px] flex items-center justify-center text-text-muted hover:text-text-secondary transition-colors"
                     aria-label={showConfirmPassword ? 'Скрыть пароль' : 'Показать пароль'}
                   >
                     {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}

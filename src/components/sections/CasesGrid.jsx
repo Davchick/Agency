@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../common/Container.jsx'
 import Section from '../common/Section.jsx'
+import FadeIn from '../common/FadeIn.jsx'
 import { cases } from '../../data/cases.js'
 import { ArrowUpRight, TrendingUp } from 'lucide-react'
 
@@ -45,12 +46,12 @@ const CasesGrid = () => {
 
         {/* Сетка кейсов */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((caseItem) => (
-            <Link
-              key={caseItem.slug}
-              to={`/cases/${caseItem.slug}`}
-              className="group block rounded-2xl bg-surface border border-border-light overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500"
-            >
+          {filtered.map((caseItem, index) => (
+            <FadeIn key={caseItem.slug} delay={index * 80}>
+              <Link
+                to={`/cases/${caseItem.slug}`}
+                className="group block rounded-2xl bg-surface border border-border-light overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500"
+              >
               {/* Изображение */}
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
@@ -64,7 +65,7 @@ const CasesGrid = () => {
                     {caseItem.industryLabel}
                   </span>
                 </div>
-                <div className="absolute top-4 right-4 w-10 h-10 bg-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                <div className="absolute top-4 right-4 min-w-[44px] min-h-[44px] bg-accent rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                   <ArrowUpRight size={18} className="text-white" />
                 </div>
               </div>
@@ -92,6 +93,7 @@ const CasesGrid = () => {
                 </div>
               </div>
             </Link>
+            </FadeIn>
           ))}
         </div>
 

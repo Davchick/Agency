@@ -26,7 +26,7 @@ const CaseDetailPage = () => {
         <Container>
           <Link
             to="/cases"
-            className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-accent transition-colors mb-8"
+            className="min-h-[44px] min-w-[44px] inline-flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-accent transition-colors mb-8 rounded-lg"
           >
             <ArrowLeft size={16} />
             Назад к кейсам
@@ -53,7 +53,7 @@ const CaseDetailPage = () => {
             <img
               src={caseItem.image}
               alt={caseItem.title}
-              className="w-full aspect-[21/9] object-cover"
+              className="w-full aspect-[16/9] md:aspect-[21/9] object-cover"
             />
           </div>
         </Container>
