@@ -1,0 +1,105 @@
+export const mockOrders = [
+  {
+    id: '1001',
+    service: 'Контекстная реклама',
+    serviceSlug: 'context',
+    status: 'in_progress',
+    date: '12 апреля 2026',
+    budget: '30 000 ₽',
+    description: 'Настройка рекламной кампании в Яндекс.Директ для интернет-магазина строительных материалов',
+    timeline: [
+      {
+        date: '12 апреля 2026',
+        title: 'Заказ создан',
+        description: 'Заявка отправлена менеджеру',
+        status: 'completed',
+      },
+      {
+        date: '13 апреля 2026',
+        title: 'Менеджер связался',
+        description: 'Обсуждение деталей и уточнение требований',
+        status: 'completed',
+      },
+      {
+        date: '14 апреля 2026',
+        title: 'Техническое задание согласовано',
+        description: 'Утверждено семантическое ядро и структура кампаний',
+        status: 'completed',
+      },
+      {
+        date: '15-18 апреля 2026',
+        title: 'Настройка рекламной кампании',
+        description: 'Создание объявлений, настройка таргетинга',
+        status: 'in_progress',
+      },
+      {
+        date: '19 апреля 2026',
+        title: 'Запуск кампании',
+        description: 'Рекламная кампания активирована',
+        status: 'pending',
+      },
+      {
+        date: '30 апреля 2026',
+        title: 'Первый отчёт',
+        description: 'Получение отчёта по результатам работы кампании',
+        status: 'pending',
+      },
+    ],
+    manager: {
+      name: 'Алексей Петров',
+      email: 'alexey@agency.ru',
+      phone: '+7 (999) 123-45-67',
+    },
+  },
+  {
+    id: '998',
+    service: 'SEO-продвижение',
+    serviceSlug: 'seo',
+    status: 'completed',
+    date: '28 марта 2026',
+    budget: '40 000 ₽',
+    description: 'Комплексное SEO-продвижение сайта юридической компании',
+    timeline: [
+      {
+        date: '28 марта 2026',
+        title: 'Заказ создан',
+        description: 'Заявка отправлена менеджеру',
+        status: 'completed',
+      },
+      {
+        date: '29 марта 2026',
+        title: 'Менеджер связался',
+        description: 'Обсуждение целей и KPI',
+        status: 'completed',
+      },
+      {
+        date: '1 апреля 2026',
+        title: 'Технический аудит проведён',
+        description: 'Выявлены и исправлены ошибки на сайте',
+        status: 'completed',
+      },
+      {
+        date: '5-25 апреля 2026',
+        title: 'Оптимизация и продвижение',
+        description: 'Контент, ссылки, внутренняя оптимизация',
+        status: 'completed',
+      },
+      {
+        date: '28 апреля 2026',
+        title: 'Заказ завершён',
+        description: 'Итоговый отчёт предоставлен, цели достигнуты',
+        status: 'completed',
+      },
+    ],
+    manager: {
+      name: 'Мария Сидорова',
+      email: 'maria@agency.ru',
+      phone: '+7 (999) 765-43-21',
+    },
+    results: {
+      trafficGrowth: '+45%',
+      positionsTop10: '78%',
+      conversionIncrease: '+22%',
+    },
+  },
+]
